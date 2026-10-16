@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Aditya Weds Sonali | Luxury Thread-Pulling Wedding Card</title>
+    <meta name="description" content="With heavenly blessings and Aashirwad of Mr. Chaman Lal Gadroo, you are cordially invited to the wedding celebrations of Aditya & Sonali (Shelly) on 20-21 November 2026 at Riverstone Cottages, Dehradun.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Rozha+One&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: {
+                            50: '#fffbf5',
+                            100: '#fcf7ee',
+                            200: '#f5ebd9',
+                            300: '#eddcbf',
+                        },
+                        gold: {
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#d97706',
+                            600: '#b45309',
+                            metallic: '#c5a059',
+                            dark: '#996515'
+                        },
+                        royalmaroon: {
+                            900: '#380208',
+                            800: '#4c0512',
+                            700: '#680719',
+                        }
+                    },
+                    fontFamily: {
+                        royal: ['"Cinzel Decorative"', 'serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        hindi: ['"Rozha One"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --gold-gradient: linear-gradient(135deg, #fef3c7, #c5a059, #b45309, #fde68a, #996515);
+            --theme-base: #1a0205;
+            --theme-card: radial-gradient(circle at top, rgba(76, 5, 18, 0.95), rgba(26, 2, 5, 0.99));
+            --theme-border: rgba(197, 160, 89, 0.45);
+        }
+
+        body {
+            background-color: var(--theme-base);
+            color: #fdf8f2;
+            overflow-x: hidden;
+            font-family: 'Cormorant Garamond', serif;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        .gold-bg {
+            background: var(--gold-gradient);
+            background-size: 200% auto;
+            animation: shine 6s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.45)); }
+            50% { filter: drop-shadow(0 0 30px rgba(253, 230, 138, 0.85)); }
+        }
+
+        @keyframes border-glow {
+            0%, 100% { border-color: rgba(197, 160, 89, 0.35); }
+            50% { border-color: rgba(253, 230, 138, 0.8); }
+        }
+
+        .animate-spin-slow { animation: spin-slow 45s linear infinite; }
+        .animate-float { animation: float-gentle 4s ease-in-out infinite; }
+        .glow-gold { animation: pulse-glow 3s ease-in-out infinite; }
+        .animated-border { animation: border-glow 4s ease-in-out infinite; }
+
+        .royal-card {
+            background: var(--theme-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--theme-border);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), inset 0 0 35px rgba(197, 160, 89, 0.15);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .royal-card:hover {
+            border-color: rgba(253, 230, 138, 0.8);
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.92), inset 0 0 45px rgba(197, 160, 89, 0.28);
+            transform: translateY(-4px);
+        }
+
+        #thread-reveal-gate {
+            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s;
+        }
+
+        .sleeve-container {
+            transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 1.2s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .gate-pulled .sleeve-container {
+            transform: translateY(-120%) scale(0.95);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .silk-thread {
+            transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease-out;
+            cursor: pointer;
+        }
+
+        .gate-pulled .silk-thread {
+            transform: translateY(300px) scaleX(0.1);
+            opacity: 0;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px) scale(0.98);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #1a0205; }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #c5a059, #fde68a, #b45309);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="selection:bg-gold-400 selection:text-royalmaroon-900">
+
+    <canvas id="petal-canvas" class="fixed inset-0 pointer-events-none z-20"></canvas>
+
+    <div class="fixed inset-2 sm:inset-4 border animated-border pointer-events-none z-30 rounded-lg">
+        <div class="absolute inset-1 border border-gold-metallic/20 rounded-lg"></div>
+        <svg class="w-10 h-10 sm:w-20 sm:h-20 text-gold-metallic absolute -top-1 -left-1" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M0,0 L100,0 L100,12 L25,12 C18,12 12,18 12,25 L12,100 L0,100 Z M24,24 L65,24 L65,30 L30,30 L30,65 L24,65 Z"/>
+            <circle cx="42" cy="42" r="5"/>
+        </svg>
+        <svg class="w-10 h-10 sm:w-20 sm:h-20 text-gold-metallic absolute -top-1 -right-1 transform scale-x-[-1]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M0,0 L100,0 L100,12 L25,12 C18,12 12,18 12,25 L12,100 L0,100 Z M24,24 L65,24 L65,30 L30,30 L30,65 L24,65 Z"/>
+            <circle cx="42" cy="42" r="5"/>
+        </svg>
+        <svg class="w-10 h-10 sm:w-20 sm:h-20 text-gold-metallic absolute -bottom-1 -left-1 transform scale-y-[-1]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M0,0 L100,0 L100,12 L25,12 C18,12 12,18 12,25 L12,100 L0,100 Z M24,24 L65,24 L65,30 L30,30 L30,65 L24,65 Z"/>
+            <circle cx="42" cy="42" r="5"/>
+        </svg>
+        <svg class="w-10 h-10 sm:w-20 sm:h-20 text-gold-metallic absolute -bottom-1 -right-1 transform scale-[-1]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M0,0 L100,0 L100,12 L25,12 C18,12 12,18 12,25 L12,100 L0,100 Z M24,24 L65,24 L65,30 L30,30 L30,65 L24,65 Z"/>
+            <circle cx="42" cy="42" r="5"/>
+        </svg>
+    </div>
+
+    <div id="thread-reveal-gate" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-royalmaroon-900/98 backdrop-blur-2xl overflow-y-auto">
+        <div class="sleeve-container relative w-full max-w-lg royal-card rounded-3xl p-6 sm:p-12 text-center shadow-2xl border-2 border-gold-metallic/60 overflow-hidden my-auto">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.12),transparent)]"></div>
+            
+            <p class="text-gold-200 tracking-[0.35em] uppercase text-xs sm:text-sm mb-2 font-royal font-bold">॥ श्री गणेशाय नमः ॥</p>
+            <p class="text-ivory-200/90 italic text-base sm:text-xl mb-4 font-serif">The Gadroo Family Cordially Invites You</p>
+
+            <div class="w-28 h-28 sm:w-40 sm:h-40 rounded-full gold-bg p-1.5 shadow-2xl mx-auto flex items-center justify-center my-4">
+                <div class="w-full h-full rounded-full bg-royalmaroon-900 flex flex-col items-center justify-center border-2 border-gold-metallic relative overflow-hidden">
+                    <span class="font-script text-5xl sm:text-7xl gold-text leading-none select-none pr-1 pt-1">AS</span>
+                </div>
+            </div>
+
+            <h1 class="font-royal text-xl sm:text-3xl gold-text tracking-wider">Aditya &amp; Sonali</h1>
+            <p class="text-gold-300/90 text-xs sm:text-sm tracking-[0.25em] uppercase mt-1.5 font-semibold">20 - 21 November 2026 • Dehradun</p>
+
+            <div class="mt-6 pt-5 border-t border-gold-metallic/30 flex flex-col items-center">
+                <p class="text-xs uppercase tracking-[0.3em] text-gold-200 mb-3 font-bold">Pull the Silk Thread to Open Invitation</p>
+                <button onclick="pullThreadReveal()" class="group relative px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl gold-bg text-royalmaroon-900 font-royal font-bold text-xs sm:text-base tracking-widest shadow-2xl hover:scale-105 active:scale-95 transition flex items-center gap-3 cursor-pointer">
+                    <span class="text-lg">🧵</span>
+                    <span>Pull Silk Thread</span>
+                </button>
+            </div>
+            
+            <div onclick="pullThreadReveal()" class="silk-thread absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-1.5 h-24 sm:h-32 bg-gradient-to-b from-gold-300 via-gold-400 to-gold-600 rounded-full shadow-lg cursor-pointer" title="Pull Thread"></div>
+        </div>
+    </div>
+
+    <main id="capture-area" class="relative z-10 overflow-hidden">
+        <div class="fixed inset-0 flex items-center justify-center pointer-events-none opacity-10 z-0">
+            <svg class="w-[600px] h-[600px] sm:w-[1000px] sm:h-[1000px] text-gold-metallic animate-spin-slow" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.5">
+                <circle cx="100" cy="100" r="90"/>
+                <circle cx="100" cy="100" r="75" stroke-dasharray="4 2"/>
+                <circle cx="100" cy="100" r="60"/>
+                <circle cx="100" cy="100" r="45" stroke-dasharray="2 2"/>
+                <path d="M100,10 C120,50 150,80 190,100 C150,120 120,150 100,190 C80,150 50,120 10,100 C50,80 80,50 100,10 Z"/>
+                <path d="M36,36 C70,60 130,60 164,36 C140,70 140,130 164,164 C130,140 70,140 36,164 C60,130 60,70 36,36 Z"/>
+            </svg>
+        </div>
+
+        <section class="min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-24 relative text-center">
+            <div class="reveal active flex flex-col items-center max-w-2xl mx-auto">
+                <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full royal-card flex items-center justify-center mb-5 glow-gold border-2 border-gold-metallic">
+                    <svg class="w-12 h-12 sm:w-16 sm:h-16 text-gold-metallic" viewBox="0 0 64 64" fill="currentColor">
+                        <path d="M32 6l-6 9h12l-6-9zm-10 12c-6 0-10 5-10 11 0 5 3 9 8 10-1 4 1 8 5 9v3h4v-5c-3-1-5-3-5-6 0-4 3-7 8-7s8 3 8 7c0 6-5 9-5 14 0 3 2 5 5 5h4v-4h-3c-1 0-2-1-2-2 0-3 5-7 5-13 0-6-4-11-10-11h-12zm10 4c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z"/>
+                    </svg>
+                </div>
+
+                <p class="font-hindi text-lg sm:text-2xl text-gold-200 tracking-wide leading-relaxed px-2">
+                    ॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।<br>
+                    निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+                </p>
+
+                <div class="flex items-center justify-center gap-4 my-5">
+                    <span class="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent to-gold-metallic"></span>
+                    <span class="text-gold-metallic text-xl">✦</span>
+                    <span class="h-px w-16 sm:w-28 bg-gradient-to-l from-transparent to-gold-metallic"></span>
+                </div>
+            </div>
+
+            <div class="reveal max-w-3xl mx-auto space-y-3">
+                <p class="text-gold-300 uppercase tracking-[0.3em] text-xs sm:text-sm font-semibold">With the heavenly blessings of</p>
+                <p class="text-lg sm:text-2xl font-semibold text-ivory-100 italic leading-relaxed">
+                    Late Smt. Sheela Gadroo, Late Smt. Rekha Gadroo &amp; Late Sh. Dilip Kumar Gadroo
+                </p>
+
+                <div class="pt-3">
+                    <p class="text-gold-200 uppercase tracking-[0.3em] text-xs sm:text-sm font-semibold">&amp; Aashirwad of</p>
+                    <h2 class="font-royal text-xl sm:text-4xl gold-text mt-2 font-bold">Mr. Chaman Lal Gadroo</h2>
+                    <p class="text-ivory-100/95 text-sm sm:text-xl mt-2.5 max-w-xl mx-auto leading-relaxed font-serif">
+                        Solicits your gracious presence &amp; blessings on the auspicious occasion of the marriage ceremony of his loving grandson
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal my-8 sm:my-14 relative w-full max-w-4xl mx-auto">
+                <div class="royal-card rounded-3xl p-6 sm:p-12 relative overflow-hidden">
+                    <div class="absolute -top-24 -left-24 w-56 h-56 bg-gold-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -right-24 w-56 h-56 bg-gold-500/10 rounded-full blur-3xl"></div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-11 items-center gap-6">
+                        <div class="md:col-span-5 flex flex-col items-center">
+                            <span class="text-xs uppercase tracking-[0.35em] text-gold-200 mb-2 font-bold">The Groom</span>
+                            <h1 class="font-script text-6xl sm:text-8xl lg:text-9xl gold-text py-1">Aditya</h1>
+                            <p class="text-ivory-200/90 text-xs sm:text-base italic mt-1 font-serif">
+                                (S/o Late Smt. Rekha Gadroo)
+                            </p>
+                            <p class="text-gold-200/90 text-xs sm:text-sm mt-1 font-serif">
+                                Grandson of Mr. Chaman Lal Gadroo
+                            </p>
+                        </div>
+
+                        <div class="md:col-span-1 flex flex-col items-center justify-center my-1 md:my-0">
+                            <div class="w-16 h-16 sm:w-22 sm:h-22 rounded-full border-2 border-gold-metallic bg-royalmaroon-900 flex items-center justify-center shadow-2xl glow-gold">
+                                <span class="font-script text-2xl sm:text-4xl gold-text">weds</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-5 flex flex-col items-center">
+                            <span class="text-xs uppercase tracking-[0.35em] text-gold-200 mb-2 font-bold">The Bride</span>
+                            <h1 class="font-script text-6xl sm:text-8xl lg:text-9xl gold-text py-1">Sonali</h1>
+                            <span class="text-gold-200 font-royal text-xs sm:text-base tracking-widest font-bold">(Shelly)</span>
+                            <p class="text-ivory-200/90 text-xs sm:text-base italic mt-1 font-serif">
+                                (D/o Smt. Beena Sharma &amp; Late Sh. Pramod Sharma)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gold-metallic/30 flex flex-col items-center">
+                        <p class="uppercase tracking-[0.3em] text-xs sm:text-sm text-gold-200 font-bold">Auspicious Wedding Ceremony</p>
+                        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-6 my-3">
+                            <span class="text-base sm:text-2xl uppercase tracking-widest text-ivory-200 border-y border-gold-metallic/40 py-1 px-3 sm:px-4 font-royal">Saturday</span>
+                            <span class="font-royal text-3xl sm:text-6xl gold-text font-bold">21 Nov</span>
+                            <span class="text-base sm:text-2xl uppercase tracking-widest text-ivory-200 border-y border-gold-metallic/40 py-1 px-3 sm:px-4 font-royal">2026</span>
+                        </div>
+                        <p class="text-ivory-200 text-sm sm:text-lg italic font-serif">From 12:00 Noon Onwards</p>
+                        <p class="text-gold-200 font-royal text-base sm:text-xl mt-2.5 tracking-wide font-bold">📍 Riverstone Cottages, Dehradun, Uttarakhand</p>
+                        
+                        <div class="flex flex-wrap items-center justify-center gap-3 mt-5">
+                            <a href="https://maps.apple.com/?q=Riverstone+Cottages,+Dehradun" target="_blank" rel="noopener noreferrer"
+                               class="py-2.5 px-4 sm:py-3 sm:px-5 rounded-2xl gold-bg text-royalmaroon-900 font-bold text-xs sm:text-base transition flex items-center gap-2 hover:scale-105 shadow-xl">
+                                <span>🍎</span> Apple Maps Location
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Riverstone+Cottages+Dehradun" target="_blank" rel="noopener noreferrer"
+                               class="py-2.5 px-4 sm:py-3 sm:px-5 rounded-2xl border-2 border-gold-metallic text-ivory-200 hover:bg-gold-metallic hover:text-royalmaroon-900 font-semibold text-xs sm:text-base transition flex items-center gap-2 shadow-lg">
+                                <span>🗺️</span> Google Maps Location
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#events" class="animate-float flex flex-col items-center text-gold-200/80 hover:text-ivory-200 transition mt-2">
+                <span class="text-xs uppercase tracking-[0.3em] mb-1.5 font-bold">Explore Celebrations</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </a>
+        </section>
+
+        <section id="events" class="py-14 sm:py-24 px-4 max-w-6xl mx-auto">
+            <div class="reveal text-center mb-12">
+                <p class="text-gold-200 uppercase tracking-[0.35em] text-xs sm:text-sm font-bold">Mangal Parinay Utsav</p>
+                <h2 class="font-royal text-2xl sm:text-5xl gold-text mt-2 font-bold">Wedding Programme</h2>
+                <p class="text-ivory-200/90 text-xs sm:text-base mt-2 font-serif">Join us in celebrating every sacred ritual leading up to the grand wedding day.</p>
+                <div class="flex items-center justify-center gap-3 mt-3">
+                    <span class="h-px w-16 sm:w-28 bg-gradient-to-r from-transparent to-gold-metallic"></span>
+                    <span class="text-gold-metallic text-xl">❈</span>
+                    <span class="h-px w-16 sm:w-28 bg-gradient-to-l from-transparent to-gold-metallic"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Haldi -->
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-amber-400/15 rounded-full blur-2xl"></div>
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 border border-amber-300/60 text-amber-200 text-xs uppercase tracking-widest font-bold">Day 1 • Morning</span>
+                            <h3 class="font-royal text-xl sm:text-3xl text-amber-200 mt-2.5 font-bold">Haldi Ceremony</h3>
+                            <p class="text-ivory-100/90 italic text-sm sm:text-lg mt-1 font-serif">Golden hues of turmeric, laughter &amp; blessings</p>
+                        </div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-500/20 border border-amber-300/50 flex items-center justify-center shrink-0 text-2xl sm:text-3xl shadow-lg">
+                            🌼
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gold-metallic/20 space-y-1.5 text-sm sm:text-lg">
+                        <div class="flex items-center gap-3 text-ivory-200"><span>📅</span> <span class="font-semibold">Friday, 20th November 2026</span></div>
+                        <div class="flex items-center gap-3 text-ivory-200"><span>🕙</span> <span>10:00 AM Onwards</span></div>
+                        <div class="flex items-center gap-3 text-gold-200 text-xs sm:text-base"><span>📍</span> <span>Riverstone Cottages, Dehradun</span></div>
+                    </div>
+                </div>
+
+                <!-- Mehndi -->
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-emerald-400/15 rounded-full blur-2xl"></div>
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-300/60 text-emerald-200 text-xs uppercase tracking-widest font-bold">Day 1 • Afternoon</span>
+                            <h3 class="font-royal text-xl sm:text-3xl text-emerald-200 mt-2.5 font-bold">Mehndi Ceremony</h3>
+                            <p class="text-ivory-100/90 italic text-sm sm:text-lg mt-1 font-serif">Intricate henna patterns &amp; soulful melodies</p>
+                        </div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-emerald-500/20 border border-emerald-300/50 flex items-center justify-center shrink-0 text-2xl sm:text-3xl shadow-lg">
+                            🌿
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gold-metallic/20 space-y-1.5 text-sm sm:text-lg">
+                        <div class="flex items-center gap-3 text-ivory-200"><span>📅</span> <span class="font-semibold">Friday, 20th November 2026</span></div>
+                        <div class="flex items-center gap-3 text-ivory-200"><span>🕑</span> <span>2:00 PM Onwards</span></div>
+                        <div class="flex items-center gap-3 text-gold-200 text-xs sm:text-base"><span>📍</span> <span>Riverstone Cottages, Dehradun</span></div>
+                    </div>
+                </div>
+
+                <!-- Ring Ceremony -->
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group border-gold-metallic/60">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-blue-400/20 rounded-full blur-2xl"></div>
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 border border-blue-300/60 text-blue-200 text-xs uppercase tracking-widest font-bold">Day 1 • Evening</span>
+                            <h3 class="font-royal text-xl sm:text-3xl text-blue-200 mt-2.5 font-bold">Ring Ceremony</h3>
+                            <p class="text-ivory-100/90 italic text-sm sm:text-lg mt-1 font-serif">Exchange of rings, celebration &amp; cocktail evening</p>
+                        </div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-blue-500/20 border border-blue-300/50 flex items-center justify-center shrink-0 text-2xl sm:text-3xl shadow-lg">
+                            💍
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gold-metallic/20 space-y-1.5 text-sm sm:text-lg">
+                        <div class="flex items-center gap-3 text-ivory-200"><span>📅</span> <span class="font-semibold">Friday, 20th November 2026</span></div>
+                        <div class="flex items-center gap-3 text-ivory-200"><span>🕖</span> <span>7:00 PM Onwards</span></div>
+                        <div class="flex items-center gap-3 text-gold-200 text-xs sm:text-base"><span>📍</span> <span>Riverstone Cottages, Dehradun</span></div>
+                    </div>
+                </div>
+
+                <!-- Shagun -->
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-cyan-400/15 rounded-full blur-2xl"></div>
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-300/60 text-cyan-200 text-xs uppercase tracking-widest font-bold">Day 2 • Morning</span>
+                            <h3 class="font-royal text-xl sm:text-3xl text-cyan-200 mt-2.5 font-bold">Shagun Ceremony</h3>
+                            <p class="text-ivory-100/90 italic text-sm sm:text-lg mt-1 font-serif">Sacred rituals, warm embraces &amp; auspicious beginnings</p>
+                        </div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-cyan-500/20 border border-cyan-300/50 flex items-center justify-center shrink-0 text-2xl sm:text-3xl shadow-lg">
+                            🏺
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gold-metallic/20 space-y-1.5 text-sm sm:text-lg">
+                        <div class="flex items-center gap-3 text-ivory-200"><span>📅</span> <span class="font-semibold">Saturday, 21st November 2026</span></div>
+                        <div class="flex items-center gap-3 text-ivory-200"><span>🕥</span> <span>10:30 AM Onwards</span></div>
+                        <div class="flex items-center gap-3 text-gold-200 text-xs sm:text-base"><span>📍</span> <span>Riverstone Cottages, Dehradun</span></div>
+                    </div>
+                </div>
+
+                <!-- Wedding Ceremony -->
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group border-gold-metallic/80 md:col-span-2 max-w-2xl mx-auto w-full">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gold-400/20 rounded-full blur-2xl"></div>
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-gold-500/25 border border-gold-metallic text-ivory-100 text-xs uppercase tracking-widest font-bold">Day 2 • Grand Finale</span>
+                            <h3 class="font-royal text-xl sm:text-4xl gold-text mt-2.5 font-bold">Wedding Ceremony</h3>
+                            <p class="text-ivory-100/90 italic text-sm sm:text-lg mt-1 font-serif">Sacred Pheras &amp; eternal union under the blessings of elders</p>
+                        </div>
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gold-500/25 border border-gold-metallic flex items-center justify-center shrink-0 text-2xl sm:text-3xl shadow-lg">
+                            🌺
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-4 border-t border-gold-metallic/20 space-y-1.5 text-sm sm:text-lg">
+                        <div class="flex items-center gap-3 text-ivory-200"><span>📅</span> <span class="font-semibold">Saturday, 21st November 2026</span></div>
+                        <div class="flex items-center gap-3 text-ivory-200"><span>🕛</span> <span>12:00 Noon Onwards</span></div>
+                        <div class="flex items-center gap-3 text-gold-200 text-xs sm:text-base"><span>📍</span> <span>Riverstone Cottages, Dehradun</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-16 px-4 max-w-4xl mx-auto">
+            <div class="reveal royal-card rounded-3xl p-6 sm:p-12 text-center relative overflow-hidden">
+                <p class="text-gold-200 uppercase tracking-[0.35em] text-xs sm:text-sm font-bold">Counting Down To The Auspicious Moment</p>
+                <h3 class="font-royal text-xl sm:text-4xl gold-text mt-2 font-bold">21st November 2026 • 12:00 PM</h3>
+
+                <div id="countdown-grid" class="grid grid-cols-4 gap-2.5 sm:gap-6 max-w-xl mx-auto my-6 sm:my-8 items-center">
+                    <div class="bg-gradient-to-b from-ivory-50 to-ivory-200 border-2 border-gold-metallic/80 rounded-2xl p-3 sm:p-6 shadow-2xl relative">
+                        <span id="cd-days" class="font-royal text-2xl sm:text-6xl text-[#000000] block font-black tracking-tight">00</span>
+                        <div class="w-6 sm:w-8 h-0.5 bg-gold-400 mx-auto my-1"></div>
+                        <span class="text-[9px] sm:text-xs uppercase tracking-[0.2em] text-[#000000] block font-bold">Days</span>
+                    </div>
+                    <div class="bg-gradient-to-b from-ivory-50 to-ivory-200 border-2 border-gold-metallic/80 rounded-2xl p-3 sm:p-6 shadow-2xl relative">
+                        <span id="cd-hours" class="font-royal text-2xl sm:text-6xl text-[#000000] block font-black tracking-tight">00</span>
+                        <div class="w-6 sm:w-8 h-0.5 bg-gold-400 mx-auto my-1"></div>
+                        <span class="text-[9px] sm:text-xs uppercase tracking-[0.2em] text-[#000000] block font-bold">Hours</span>
+                    </div>
+                    <div class="bg-gradient-to-b from-ivory-50 to-ivory-200 border-2 border-gold-metallic/80 rounded-2xl p-3 sm:p-6 shadow-2xl relative">
+                        <span id="cd-mins" class="font-royal text-2xl sm:text-6xl text-[#000000] block font-black tracking-tight">00</span>
+                        <div class="w-6 sm:w-8 h-0.5 bg-gold-400 mx-auto my-1"></div>
+                        <span class="text-[9px] sm:text-xs uppercase tracking-[0.2em] text-[#000000] block font-bold">Minutes</span>
+                    </div>
+                    <div class="bg-gradient-to-b from-ivory-50 to-ivory-200 border-2 border-gold-metallic/80 rounded-2xl p-3 sm:p-6 shadow-2xl relative">
+                        <span id="cd-secs" class="font-royal text-2xl sm:text-6xl text-[#000000] block font-black tracking-tight">00</span>
+                        <div class="w-6 sm:w-8 h-0.5 bg-gold-400 mx-auto my-1"></div>
+                        <span class="text-[9px] sm:text-xs uppercase tracking-[0.2em] text-[#000000] block font-bold">Seconds</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aditya+Weds+Sonali+(Shelly)+-+Wedding+Ceremony&dates=20261120T043000Z/20261121T123000Z&details=With+the+blessings+of+Mr.+Chaman+Lal+Gadroo,+you+are+cordially+invited+to+the+wedding+celebrations+of+Aditya+and+Sonali+(Shelly).&location=Riverstone+Cottages,+Dehradun,+Uttarakhand"
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 rounded-2xl gold-bg text-royalmaroon-900 font-bold text-xs sm:text-base tracking-wide hover:scale-105 transition shadow-xl">
+                        <span>📅</span> <span>Add to Calendar</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-16 px-4 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.35em] text-gold-200 font-bold">Destination Venue</span>
+                        <h3 class="font-royal text-2xl sm:text-4xl gold-text mt-2 font-bold">Riverstone Cottages</h3>
+                        <p class="text-ivory-200 text-base sm:text-lg mt-1 font-serif">Dehradun, Uttarakhand</p>
+                        <p class="text-ivory-100/90 text-xs sm:text-base mt-3 leading-relaxed font-serif">
+                            Nestled amidst serene mountain breezes and riverside charm in Dehradun, join us as two families unite in celebration.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-gold-metallic/30 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a href="https://maps.apple.com/?address=Riverstone+Cottages,+Dehradun,+Uttarakhand" target="_blank" rel="noopener noreferrer"
+                           class="w-full py-2.5 px-3 rounded-xl gold-bg text-royalmaroon-900 font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2 hover:scale-[1.02] shadow-lg">
+                            <span>🍎</span> <span>Apple Maps</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Riverstone+Cottages+Dehradun" target="_blank" rel="noopener noreferrer"
+                           class="w-full py-2.5 px-3 rounded-xl border-2 border-gold-metallic text-ivory-200 hover:bg-gold-metallic hover:text-royalmaroon-900 font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-2 shadow-lg">
+                            <span>🗺️</span> <span>Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reveal royal-card rounded-3xl p-6 sm:p-10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.35em] text-gold-200 font-bold">With Best Compliments From</span>
+                        <h3 class="font-royal text-2xl sm:text-4xl gold-text mt-2 font-bold">Mr. Chaman Lal Gadroo</h3>
+                        <p class="text-ivory-200 text-base sm:text-lg mt-1 font-serif">&amp; All Relatives &amp; Friends</p>
+                        
+                        <div class="mt-5 p-4 rounded-2xl bg-royalmaroon-900/85 border border-gold-metallic/40 text-ivory-100/95 text-xs sm:text-base">
+                            <p class="text-gold-200 uppercase tracking-widest text-xs mb-1 font-bold">Residence:</p>
+                            <p class="font-serif">H.No. 50, Sector A-2, Laxmipuram Chinore, Jammu</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <p class="text-xs uppercase tracking-[0.3em] text-gold-200 mb-2 font-bold">R.S.V.P. (Tap to Call)</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                            <a href="tel:+917006145693" class="py-2.5 px-2 rounded-xl bg-royalmaroon-900/90 border border-gold-metallic/40 hover:border-gold-metallic text-center text-ivory-200 text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 shadow-md">
+                                <span>📞</span> 7006145693
+                            </a>
+                            <a href="tel:+919011225366" class="py-2.5 px-2 rounded-xl bg-royalmaroon-900/90 border border-gold-metallic/40 hover:border-gold-metallic text-center text-ivory-200 text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 shadow-md">
+                                <span>📞</span> 9011225366
+                            </a>
+                            <a href="tel:+916006019343" class="py-2.5 px-2 rounded-xl bg-royalmaroon-900/90 border border-gold-metallic/40 hover:border-gold-metallic text-center text-ivory-200 text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 shadow-md">
+                                <span>📞</span> 6006019343
+                            </a>
+                            <a href="tel:+917006081825" class="py-2.5 px-2 rounded-xl bg-royalmaroon-900/90 border border-gold-metallic/40 hover:border-gold-metallic text-center text-ivory-200 text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 shadow-md">
+                                <span>📞</span> 7006081825
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Kids Note Section -->
+        <section class="py-8 px-4 max-w-3xl mx-auto">
+            <div class="reveal royal-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border-2 border-gold-metallic/70 bg-royalmaroon-900/90">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(253,230,138,0.08),transparent)]"></div>
+                <span class="text-2xl sm:text-3xl block mb-2">🎵 🥁 ✨</span>
+                <h3 class="font-royal text-lg sm:text-2xl gold-text font-bold mb-3">
+                    "Bajega band bajega gana humare mamu chachu ki shadhi mae jalol jalol aana"
+                </h3>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto my-3"></div>
+                <p class="text-ivory-100 text-sm sm:text-lg italic font-serif">
+                    — From Hidansh, Aadhya and Pragyan
+                </p>
+            </div>
+        </section>
+
+        <section class="py-10 px-4 max-w-xl mx-auto text-center space-y-4">
+            <button onclick="downloadInvitationCard()" id="download-btn" class="w-full py-3.5 sm:py-4 px-6 rounded-2xl gold-bg text-royalmaroon-900 font-royal font-bold text-sm sm:text-lg tracking-wider shadow-2xl hover:scale-105 active:scale-95 transition flex items-center justify-center gap-3 cursor-pointer">
+                <span>📥</span>
+                <span>Download / Save Invitation Card</span>
+            </button>
+            <p id="action-status" class="text-xs text-gold-200 mt-2 font-serif italic"></p>
+
+            <div class="royal-card rounded-2xl p-4 sm:p-5 text-left text-xs sm:text-sm text-ivory-200 space-y-2 mt-4">
+                <p class="font-bold text-gold-200 uppercase tracking-widest flex items-center gap-2">
+                    <span>💡</span> How to share this invite with family &amp; friends:
+                </p>
+                <p class="font-serif leading-relaxed">
+                    1. Tap your browser's <strong>Share</strong> or <strong>Copy Link</strong> button (usually in your top or bottom address menu).<br>
+                    2. Paste the link directly into <strong>WhatsApp</strong>, SMS, or social media chats.<br>
+                    3. Or click <strong>Download / Save</strong> above to keep the invitation card image on your device.
+                </p>
+            </div>
+        </section>
+
+        <footer class="py-12 text-center px-4 border-t border-gold-metallic/20 mt-6">
+            <p class="font-script text-4xl sm:text-6xl gold-text">Aditya &amp; Sonali</p>
+            <p class="text-gold-200/80 text-xs sm:text-sm uppercase tracking-[0.35em] mt-2.5 font-bold">#AdityaKiSonali • 21.11.2026</p>
+        </footer>
+    </main>
+
+    <script>
+        const canvas = document.getElementById('petal-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let width, height;
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('orientationchange', () => setTimeout(resizeCanvas, 200));
+        resizeCanvas();
+
+        const petalColors = ['#fde68a', '#fcd34d', '#fef3c7', '#ffffff', '#e2e8f0', '#fbcfe8'];
+
+        class RosePetal {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * width;
+                this.y = -20 - Math.random() * height;
+                this.size = Math.random() * 10 + 4;
+                this.speedY = Math.random() * 0.9 + 0.3;
+                this.speedX = (Math.random() - 0.5) * 0.8;
+                this.angle = Math.random() * 360;
+                this.spin = (Math.random() - 0.5) * 1.5;
+                this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
+                this.opacity = Math.random() * 0.65 + 0.25;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX + Math.sin(this.y * 0.01) * 0.4;
+                this.angle += this.spin;
+
+                if (this.y > height + 25 || this.x < -35 || this.x > width + 35) {
+                    this.reset();
+                    this.y = -15;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.angle * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+
+                ctx.beginPath();
+                ctx.ellipse(0, 0, this.size, this.size * 0.6, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = window.innerWidth < 640 ? 30 : 60;
+            for (let i = 0; i < count; i++) {
+                particles.push(new RosePetal());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        function triggerBurst() {
+            for (let i = 0; i < 30; i++) {
+                particles.push(new RosePetal());
+            }
+            if (particles.length > 150) {
+                particles.splice(0, 30);
+            }
+        }
+
+        function pullThreadReveal() {
+            const gate = document.getElementById('thread-reveal-gate');
+            gate.classList.add('gate-pulled');
+            triggerBurst();
+
+            setTimeout(() => {
+                gate.style.opacity = '0';
+                gate.style.visibility = 'hidden';
+            }, 1200);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const weddingTarget = new Date('2026-11-21T12:00:00+05:30').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = weddingTarget - now;
+
+            if (diff <= 0) {
+                document.getElementById('cd-days').textContent = '00';
+                document.getElementById('cd-hours').textContent = '00';
+                document.getElementById('cd-mins').textContent = '00';
+                document.getElementById('cd-secs').textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+            document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+        }
+
+        function downloadInvitationCard() {
+            const btn = document.getElementById('download-btn');
+            const status = document.getElementById('action-status');
+            btn.disabled = true;
+            status.textContent = "Preparing high-resolution invitation image...";
+
+            const captureArea = document.getElementById('capture-area');
+            
+            html2canvas(captureArea, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: '#1a0205'
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Aditya-Weds-Sonali-Wedding-Card.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                
+                status.textContent = "Invitation card downloaded successfully!";
+                btn.disabled = false;
+                setTimeout(() => { status.textContent = ""; }, 4000);
+            }).catch(err => {
+                console.error(err);
+                status.textContent = "Unable to generate image directly. You can take a screenshot or use browser print.";
+                btn.disabled = false;
+            });
+        }
+
+        window.onload = function () {
+            initParticles();
+            animateParticles();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        };
+    </script>
+</body>
+</html>
